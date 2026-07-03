@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<style>body{margin:0;overflow:hidden;background:#000}</style>
+</head>
+<body>
+<script>
+// Mock al_renderHtml: inject HTML directly into current document instead of srcdoc iframe
+window.al_renderHtml = function(data) {
+    document.open();
+    document.write(data.html);
+    document.close();
+};
+</script>
+<script src="rungoddess-playable-decoded.js"></script>
+</body>
+</html>
