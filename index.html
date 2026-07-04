@@ -1296,8 +1296,8 @@
     }
 
     function loadContent(lang) {
-      var file = lang === 'en' ? 'content-en.md' : 'content.md';
-      fetch(file)
+      var file = (lang === 'en' ? 'content-en.md' : 'content.md');
+      fetch('https://cdn.jsdelivr.net/gh/burkereiii/resume@master/' + file)
         .then(function(r){ return r.text(); })
         .then(function(text) {
           renderContent(text);
